@@ -7,8 +7,8 @@ app.get('/', function (req, res) {
 })
 
 app.post('/', function(req, res){
-   console.log({aa:req.body})
-   res.json({aa:req.body});
+   console.log(req.body)
+   res.send(req.body);
 });
 
 app.listen(process.env.PORT);
