@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
 })
 
 app.post('/', function(request, response){
-  const { postData: { contents } = {} } = request;
+  const { postData: { contents } = {} } = request.body;
   const { text, id } = JSON.parse(contents);
   console.log(text);
    response.send(text)
