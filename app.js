@@ -9,8 +9,8 @@ app.get('/', function (req, res) {
 })
 
 app.post('/', function(request, response){
-   console.log(request.body)
-   response.json(request.body);
+   console.log({ answer: 42 })
+   response.json({ answer: 42 });
 });
 
 app.listen(process.env.PORT);
