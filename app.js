@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
 
 app.post('/', function(req, res){
    console.log(req.body)
-   res.send(req.body);
+   res.send({test:1});
 });
 
 app.listen(process.env.PORT);
