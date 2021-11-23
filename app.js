@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
 })
 
 app.post('/', function(request, response){
-   console.log(request.body)
+   console.log(request.body.text)
    response.json(request.body);
 });
 
