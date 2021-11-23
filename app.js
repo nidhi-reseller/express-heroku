@@ -1,9 +1,12 @@
-const express = require('express');
-const app = express();
+var express = require('express');
+
+var app = express();
 
 app.use(express.json());
 
-app.post('*', (req, res) => {
-  res.json(req.body);
+app.post('/', function(request, response){
+  console.log(request.body);      // your JSON
+   response.send(request.body);    // echo the result back
 });
-const server = await app.listen(process.env.PORT || 3000);
+
+app.listen(process.env.PORT);
