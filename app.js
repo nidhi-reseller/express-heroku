@@ -9,8 +9,10 @@ app.get('/', function (req, res) {
 })
 
 app.post('/', function(request, response){
-  console.log(request.body);      // your JSON
-   response.send(request.body);    // echo the result back
+  const { postData: { contents } = {} } = request;
+  const { text, id } = JSON.parse(contents);
+  console.log(text);
+   response.send(text)
 });
 
 app.listen(process.env.PORT);
